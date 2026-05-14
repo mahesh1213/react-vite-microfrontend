@@ -1,0 +1,19 @@
+{
+  "name": "micro-frontend-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "host",
+    "todo"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev -w host\" \"npm run dev -w todo\"",
+    "build:serve": "concurrently \"npm run build -w host && npm run serve -w host\" \"npm run build -w todo && npm run serve -w todo\"",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
