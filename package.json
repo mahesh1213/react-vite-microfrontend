@@ -3,17 +3,27 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "host",
-    "todo"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
-    "install:all": "npm install --workspaces",
-    "dev": "concurrently \"npm run dev -w host\" \"npm run dev -w todo\"",
-    "build:serve": "concurrently \"npm run build -w host && npm run serve -w host\" \"npm run build -w todo && npm run serve -w todo\"",
+    "install:all": "npm install",
+    "dev": "concurrently \"npm run dev --workspace=host\" \"npm run dev --workspace=todo\"",
     "build": "npm run build --workspaces",
+    "build:serve": "concurrently \"npm run build --workspace=host && npm run preview --workspace=host\" \"npm run build --workspace=todo && npm run preview --workspace=todo\"",
     "lint": "npm run lint --workspaces"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.5.0",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.5.14",
+    "tailwind-scrollbar": "^4.0.2",
+    "tailwindcss": "^4.3.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

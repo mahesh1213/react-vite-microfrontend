@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg;
+}
+
+.card {
+  @apply p-4 shadow-lg rounded-xl bg-white;
+}
+
+.page-title {
+  @apply text-3xl font-bold mb-4;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@shared/ui-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "./styles.css": "./styles.css",
+  "./tailwind.config": "./tailwind.config.js"
+}

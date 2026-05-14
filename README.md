@@ -396,3 +396,22 @@ npm run build:serve
 **Created:** May 2026  
 **Architecture:** Micro Frontend with Vite Module Federation  
 **State Management:** Redux Toolkit (Centralized Store in Host)
+
+npm install @shared/ui-theme -w todo
+npm install @shared/ui-theme -w host
+
+tailwind.config.js each app
+npm ls @shared/ui-theme
+
+---
+
+mkdir micro-frontend-monorepo
+cd micro-frontend-monorepo
+npm create vite@latest host -- --template react-ts
+npm create vite@latest todo -- --template react-ts
+npm install @originjs/vite-plugin-federation -w host
+npm install @originjs/vite-plugin-federation -w todo
+
+npm install
+
+npm query .workspace
